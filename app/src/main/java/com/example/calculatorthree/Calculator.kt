@@ -59,20 +59,60 @@ fun Calculator(
             verticalArrangement = Arrangement.Bottom,
             horizontalAlignment = Alignment.End
         ) {
-            Text(
-                text = state.value.expression,//display expression
-                fontSize = 36.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.onPrimaryContainer,
+            val currentState = state.value
+            when (currentState) {
+                is CalculatorState.Error -> {
+                    Text(
+                        text = currentState.expression,//display expression
+                        fontSize = 36.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.error,
 
-                )
-            Text(
-                text = state.value.result,//display result
-                fontSize = 17.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                        )
+                    Text(
+                        text = "",//display result
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSecondaryContainer,
 
-                )
+                        )
+                }
+
+                CalculatorState.Initial -> {}
+                is CalculatorState.Input -> {
+                    Text(
+                        text = currentState.expression,//display expression
+                        fontSize = 36.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+
+                        )
+                    Text(
+                        text = currentState.result,//display result
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSecondaryContainer,
+
+                        )
+                }
+
+                is CalculatorState.Success -> {
+                    Text(
+                        text = currentState.result,//display expression
+                        fontSize = 36.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer,
+
+                        )
+                    Text(
+                        text = "",//display result
+                        fontSize = 17.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSecondaryContainer,
+
+                        )
+                }
+            }
 
         }//конец колонки экрана
         Row(

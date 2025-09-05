@@ -20,12 +20,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             CalculatorThreeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Calculator(
-//                        modifier = Modifier.padding(bottom = innerPadding.calculateBottomPadding())
-//                    )
-                    TestingModule(
+                   Calculator(
                         modifier = Modifier.padding(bottom = innerPadding.calculateBottomPadding())
                     )
+//                    TestingModule(
+//                        modifier = Modifier.padding(bottom = innerPadding.calculateBottomPadding())
+//                    )
 
                 }
             }
