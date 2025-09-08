@@ -14,47 +14,47 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 
-@Composable
-fun TestingModule(
-    modifier: Modifier = Modifier,
-    viewModel: TestingViewModel= viewModel()
-) {
-    Column(modifier = Modifier.fillMaxHeight()) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-
-
-        ) {
-            Box (modifier = Modifier
-                .clickable {
-                    viewModel.proccessTesting(TestingCommand.Input(SymbolTesting.ONE))
-                }
-
-            ){
-                Text(
-                    text = "one",
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 36.sp
-
-                )
-            }
-            Box {
-                Text(
-                    text = "two",
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 36.sp
-
-                )
-            }
-            Box {
-                Text(
-                    text = "three",
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 36.sp
-
-                )
-            }
-        }
-    }
-}
+//@Composable
+//fun TestingModule(
+//    modifier: Modifier = Modifier,
+//    viewModel: TestingViewModel= viewModel()
+//) {
+//    Column(modifier = Modifier.fillMaxHeight()) {
+//        Row(
+//            modifier = Modifier.fillMaxWidth(),
+//            horizontalArrangement = Arrangement.SpaceEvenly
+//
+//
+//        ) {
+//            Box (modifier = Modifier
+//                .clickable {
+//                    viewModel.proccessTesting(TestingCommand.Input(SymbolTesting.ONE))
+//                }
+//
+//            ){
+//                Text(
+//                    text = "one",
+//                    fontWeight = FontWeight.SemiBold,
+//                    fontSize = 36.sp
+//
+//                )
+//            }
+//            Box {
+//                Text(
+//                    text = "two",
+//                    fontWeight = FontWeight.SemiBold,
+//                    fontSize = 36.sp
+//
+//                )
+//            }
+//            Box {
+//                Text(
+//                    text = "three",
+//                    fontWeight = FontWeight.SemiBold,
+//                    fontSize = 36.sp
+//
+//                )
+//            }
+//        }
+//    }
+//}
