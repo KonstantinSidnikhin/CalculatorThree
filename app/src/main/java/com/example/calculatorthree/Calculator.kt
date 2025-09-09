@@ -53,7 +53,7 @@ fun Calculator(
                         bottomEnd = 40.dp
                     )
                 )
-                .background(MaterialTheme.colorScheme.error)
+                .background(MaterialTheme.colorScheme.primary)
                 .weight(1f)
                 .padding(bottom = 16.dp, end = 40.dp, start = 40.dp),
             verticalArrangement = Arrangement.Bottom,

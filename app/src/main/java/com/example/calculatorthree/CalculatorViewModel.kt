@@ -44,7 +44,7 @@ class CalculatorViewModel : ViewModel() {
                 expression += symbol
                 _state.value = CalculatorState.Input(
                     expression = expression,
-                    result = "anything"
+                    result = evaluate() ?: ""
                 )
             }
         }
